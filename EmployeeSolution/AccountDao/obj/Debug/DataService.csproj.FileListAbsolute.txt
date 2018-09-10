@@ -1,0 +1,11 @@
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EmployeeSolutions.mdf
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EmployeeSolutions_log.ldf
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\AccountDao.dll.config
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\AccountDao.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\AccountDao.pdb
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EntityFramework.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EntityFramework.xml
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\obj\Debug\AccountDao.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\AccountDao\obj\Debug\AccountDao.pdb

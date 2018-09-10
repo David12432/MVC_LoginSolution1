@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SharedModels.EmployeeUserDescriptionViewModel>
+<!-- model must be IEumberable to have the ability to iterate and populate the view-->
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/StyleSheets/StyleSheet1.css" />
+</head>
+<body>
+    <h2>Index</h2>
+    <h4>Employee List</h4>
+    @Html.Partial("~/Views/Shared/_MainNavigationBarTop.cshtml")
+    <div>
+        <hr />
+        <dl class="dl-horizontal"></dl>
+        <div>
+            @if (TempData["Update"] != null)
+            {
+                @Html.Raw(TempData["Update"])
+            }
+        </div>
+
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <td><bold>Username</bold></td>
+                    <td><bold>First Name</bold></td>
+                    <td><bold>Last Name</bold></td>
+                    <td><bold>Date Of Birth</bold></td>
+                </tr>
+            </thead>
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>
+                        @data.userName
+                    </td>
+                    <td>
+                        @data.employeeFirstName
+                    </td>
+                    <td>
+                        @data.employeeLastName
+                    </td>
+                    <td>
+                        @data.employeeDOB.ToShortDateString()<!--Extractonly the date portion from the DateTime variable-->
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { @id = data.userId, @userName = data.userName, @firstName = data.employeeFirstName, @lastName = data.employeeLastName, @dob = data.employeeDOB })<!--pass id and or model to next view-->
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { @id = data.userId })
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</body>

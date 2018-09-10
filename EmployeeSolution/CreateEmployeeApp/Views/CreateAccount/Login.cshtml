@@ -1,0 +1,73 @@
+﻿@model SharedModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+<head>
+    <link rel="stylesheet" href="~/StyleSheets/StyleSheet1.css" />
+    <script type="text/javascript" src="/Scripts/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript">
+        $(Document).ready(function () {
+            $("#loginForm").validate({
+                rules: {
+                    "Username": {
+                        required: true,
+                    },
+                    "Password": {
+                        required: true,
+                    },
+
+                },
+                messages: {
+                    "Password": {
+                        required: "Password is a required field",
+                    },
+                    "Username": {
+                        required: "Username is a required field",
+                    }
+                }
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    @Html.Partial("~/Views/Shared/_MainNavigationBarTop.cshtml")
+
+    <div class="form-horizontal">
+
+        <hr />
+        @if (TempData["Update"] != null)
+        {
+            @Html.Raw(TempData["Update"])
+        }
+        <form action="@Url.Action("VerifyLogin", "CreateAccount", Model)" id="loginForm" method="post">
+            @Html.AntiForgeryToken()
+            <fieldset>
+                <div>
+                    @Html.ValidationSummary(true)
+                    @Html.LabelFor(model => model.Username):
+                    @Html.EditorFor(model => model.Username)
+                    <span style="color: red; font-weight: bold">
+
+                    </span>
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Password):
+                    @Html.EditorFor(model => model.Password)
+                    <span style="color: white; font-weight: bold">
+
+                    </span>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Login" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

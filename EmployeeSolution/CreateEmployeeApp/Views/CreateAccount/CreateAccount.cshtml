@@ -1,0 +1,121 @@
+﻿@model SharedModels.AccountViewModel
+
+@{
+    ViewBag.Title = "CreateAccount";
+}
+<legend><b>Fill out the form below!</b></legend>
+
+<head>
+    <link rel="stylesheet" href="~/StyleSheets/StyleSheet1.css" />
+    <script type="text/javascript" src="/Scripts/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/create-account.js"></script>
+
+    <!--<script type ="text/javascript" src = "~/Scripts/create-account.js"></script>--><!--created to validate form-->
+  <!--  <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.validator.addMethod("verifyDate",
+                function (value, element) {
+                    // yyyy-mm-dd
+                    var re = /^\d{4}-\d{1,2}-\d{1,2}$/;
+
+                    return (re.test(value));
+                });
+            $("#accountForm").validate({
+                rules: {
+                    "User.Username": {
+                        required: true,
+                        minlength: 4
+                    },
+                    "Password": {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 20
+                    },
+                    "ConfirmPassword": {
+                        required: true,
+                        minlength: 6,
+                        equalTo: "#User.password"
+                    },
+                    "Employee.FirstName": "required",
+                    "Employee.LastName": "required",
+                    "Employee.DOB": {
+                        required: true,
+                        minlength: 8,
+                        verifyDate: true
+        }
+        },
+        messages: {
+            "User.Username": {
+                required: "Username is a required field",
+                minlength: "Username must be at least 4 characters long"
+            },
+            "Password": {
+                    required: "Password is a required field",
+                    minlength: "Password must be 6 characters long"
+            },
+            "ConfirmPassword": {
+                    required: "Please confirm password",
+                    minlength: "Password must be at least 6 characters long",
+                    maxlength: "Password can be no longer than 20 characters long",
+                //equalTo: "Please verify passwords match"
+                    },
+            "Employee.FirstName": { required: "Please enter first name" },
+            "Employee.LastName": { required: "Please enter last name" },
+            "Employee.DOB": { 
+                required: "Please enter a DOB", 
+                minlength: "Please check your DOB, you might be missing characters",
+                verifyDate: "Date must be in the format of (YYYY-MM-DD)"
+            }
+        }
+
+        });
+        });
+
+
+    </script>-->
+
+
+</head>
+<body>
+    @Html.Partial("~/Views/Shared/_MainNavigationBarTop.cshtml")
+    <h2>Account Creation</h2>
+
+
+    <form action="@Url.Action("Create", "CreateAccount", Model)" id="accountForm" method="post">
+        @Html.AntiForgeryToken()
+        <fieldset>
+            <div>
+                @Html.ValidationSummary(true)
+                @Html.LabelFor(model => model.User.Username):
+                @Html.TextBoxFor(model => model.User.Username)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Password):
+                @Html.EditorFor(model => model.Password)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.ConfirmPassword):
+                @Html.EditorFor(model => model.ConfirmPassword)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Employee.FirstName)
+                @Html.EditorFor(model => model.Employee.FirstName)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Employee.LastName)
+                @Html.EditorFor(model => model.Employee.LastName)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Employee.DOB):
+                @Html.EditorFor(model => model.Employee.DOB)
+                <!--<span style="color: red; font-weight: bold">
+
+                </span>-->
+            </div>
+
+            <input type="submit" value="Create Account" class="button" />
+        </fieldset>
+    </form>
+</body>

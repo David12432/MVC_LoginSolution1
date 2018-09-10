@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/StyleSheets/StyleSheet1.css" />
+</head>
+<body>
+    @Html.Partial("~/Views/Shared/_MainNavigationBarTop.cshtml")
+
+    <div>
+        @if (ViewBag.Error != null)
+        {
+        @Html.Raw(ViewBag.Error);
+        }
+    </div>
+    <h2>Welcome!</h2>
+    <p>Login above to begin</p>
+    <p>Do not have an account? Simply create one with the link above</p>
+</body>

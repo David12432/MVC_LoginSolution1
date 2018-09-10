@@ -1,0 +1,5 @@
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\RegisterService\bin\Debug\RegisterService.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\RegisterService\bin\Debug\RegisterService.pdb
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\RegisterService\obj\Debug\RegisterService.csprojResolveAssemblyReference.cache
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\RegisterService\obj\Debug\RegisterService.dll
+C:\Users\isthe_000\Documents\Visual Studio 2015\Projects\EmployeeSolution\RegisterService\obj\Debug\RegisterService.pdb
